@@ -1,0 +1,9 @@
+image: node:6.12.3
+test:
+  script: |
+    cd AwesomeProject/google-signin
+    npm install
+    node node_modules/jest/bin/jest-test.js --coverage
+cache:
+  paths:
+    - "AwesomeProject/google-signin/node_modules/"
