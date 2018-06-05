@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="VoiceOfCustomer">
+        <wb-resource deploy-path="/" source-path="/WebContent"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes/" source-path="/ImportedClasses"/>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/ANIRUDDHA/Desktop/WS_VoiceOfCustomer/External Jar Files/activation-1.1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/ANIRUDDHA/Desktop/WS_VoiceOfCustomer/External Jar Files/Axis_Service_Archiver.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/ANIRUDDHA/Desktop/WS_VoiceOfCustomer/External Jar Files/Axis2CodegenWizard.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/ANIRUDDHA/Desktop/WS_VoiceOfCustomer/External Jar Files/db2jcc.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="VoiceOfCustomer"/>
+        <property name="java-output-path" value="build/classes"/>
+    </wb-module>
+</project-modules>

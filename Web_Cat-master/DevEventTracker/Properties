@@ -1,0 +1,16 @@
+#This file is automatically rewritten by ANT, so all formatting will be trashed.
+#Mon Nov 30 10:44:54 EST 2015
+DevEventTracker.description=This subsystem provides support for IDE-based event data collection from IDE's such as Eclipse.
+DevEventTracker.version.minor=0
+DevEventTracker.copyright=(c) 2015 Virginia Tech Department of Computer Science
+DevEventTracker.info.url=http\://wiki.web-cat.org/WCWiki/WebApiSubsystem
+DevEventTracker.provider.url=http\://web-cat.org/updates
+DevEventTracker.version.major=1
+DevEventTracker.license=GNU Affero General Public License v.3
+subsystem.DevEventTracker=org.webcat.deveventtracker.DevEventTracker
+DevEventTracker.provider=Virginia Tech Computer Science
+DevEventTracker.version.revision=1
+DevEventTracker.version.date=20151130
+DevEventTracker.history.url=http\://wiki.web-cat.org/WCWiki/WebApiSubsystem/ChangeHistory
+DevEventTracker.requires=Core, Grader
+DevEventTracker.license.url=http\://www.gnu.org/licenses/agpl.html

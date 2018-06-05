@@ -1,0 +1,32 @@
+Page: WCPageWithNavigation {
+    title = "Generate a Report";
+}
+
+ReportTemplateTable: WCTable {
+    displayGroup = reportTemplatesDisplayGroup;
+}
+
+ChooseTemplate: WCLink {
+    string = reportTemplate.name;
+    action = templateChosen;
+}
+
+NameColumn: WCTableHeading {
+    title = "Report Template";
+    sortOnKeyPaths = "name";
+}
+
+DateColumn: WCTableHeading {
+    title = "Date";
+    sortOnKeyPaths = "uploadedTime";
+}
+
+VersionColumn: WCTableHeading {
+    title = "Version";
+    sortOnKeyPaths = "version";
+}
+
+InstalledByColumn: WCTableHeading {
+    title = "Installed By";
+    sortOnKeyPaths = "user.name";
+}

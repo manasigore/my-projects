@@ -1,0 +1,40 @@
+{
+    attributes = (
+        {
+            allowsNull = N; 
+            columnName = studentProjectId; 
+            name = studentProjectId; 
+            prototypeName = id; 
+        }, 
+        {
+            allowsNull = N; 
+            columnName = uuidForUserId; 
+            name = uuidForUserId; 
+            prototypeName = id; 
+        }
+    ); 
+    attributesUsedForLocking = (studentProjectId, uuidForUserId); 
+    className = EOGenericRecord; 
+    externalName = StudentProjectUuidForUser; 
+    fetchSpecificationDictionary = {}; 
+    name = StudentProjectUuidForUser; 
+    primaryKeyAttributes = (studentProjectId, uuidForUserId); 
+    relationships = (
+        {
+            destination = StudentProject; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = id; sourceAttribute = studentProjectId; }); 
+            name = studentProject; 
+        }, 
+        {
+            destination = UuidForUser; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = id; sourceAttribute = uuidForUserId; }); 
+            name = uuidForUser; 
+        }
+    ); 
+}

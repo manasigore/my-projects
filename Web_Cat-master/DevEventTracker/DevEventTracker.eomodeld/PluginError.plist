@@ -1,0 +1,61 @@
+{
+    attributes = (
+        {columnName = className; name = className; prototypeName = mediumText; }, 
+        {
+            columnName = exceptionClass; 
+            name = exceptionClass; 
+            prototypeName = mediumText; 
+        }, 
+        {
+            columnName = exceptionMessage; 
+            name = exceptionMessage; 
+            prototypeName = longText; 
+        }, 
+        {columnName = fileName; name = fileName; prototypeName = mediumText; }, 
+        {allowsNull = N; name = id; prototypeName = id; }, 
+        {columnName = lineNumber; name = lineNumber; prototypeName = integer; }, 
+        {columnName = methodName; name = methodName; prototypeName = mediumText; }, 
+        {columnName = stackTrace; name = stackTrace; prototypeName = longText; }, 
+        {
+            allowsNull = Y; 
+            columnName = uuidForUserID; 
+            name = uuidForUserID; 
+            prototypeName = id; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        className, 
+        exceptionClass, 
+        exceptionMessage, 
+        fileName, 
+        id, 
+        lineNumber, 
+        methodName, 
+        stackTrace, 
+        uuidForUserID
+    ); 
+    className = "org.webcat.deveventtracker.PluginError"; 
+    classProperties = (
+        className, 
+        exceptionClass, 
+        exceptionMessage, 
+        fileName, 
+        lineNumber, 
+        methodName, 
+        stackTrace, 
+        uuidForUser
+    ); 
+    externalName = PluginError; 
+    fetchSpecificationDictionary = {}; 
+    name = PluginError; 
+    primaryKeyAttributes = (id); 
+    relationships = (
+        {
+            destination = UuidForUser; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = id; sourceAttribute = uuidForUserID; }); 
+            name = uuidForUser; 
+        }
+    ); 
+}

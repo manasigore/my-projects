@@ -1,0 +1,46 @@
+{
+    attributes = (
+        {allowsNull = N; name = id; prototypeName = id; }, 
+        {columnName = uri; name = uri; prototypeName = mediumText; }, 
+        {columnName = uuid; name = uuid; prototypeName = tinyText; }
+    ); 
+    attributesUsedForLocking = (id, uri, uuid); 
+    className = "org.webcat.deveventtracker.StudentProject"; 
+    classProperties = (projectsForAssignment, sensorData, studentUuids, uri, uuid); 
+    externalName = StudentProject; 
+    internalInfo = {"_javaClientClassName" = StudentProject; }; 
+    name = StudentProject; 
+    primaryKeyAttributes = (id); 
+    relationships = (
+        {
+            destination = SensorData; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = projectId; sourceAttribute = id; }); 
+            name = sensorData; 
+        }, 
+        {
+            deleteRule = EODeleteRuleCascade; 
+            destination = StudentProjectForAssignment; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = studentProjectId; sourceAttribute = id; }); 
+            name = studentProjectForAssignments; 
+            propagatesPrimaryKey = Y; 
+        }, 
+        {
+            definition = "studentProjectForAssignments.projectForAssignment"; 
+            name = projectsForAssignment; 
+        }, 
+        {
+            deleteRule = EODeleteRuleCascade; 
+            destination = StudentProjectUuidForUser; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = studentProjectId; sourceAttribute = id; }); 
+            name = studentProjectUuidForUsers; 
+            propagatesPrimaryKey = Y; 
+        }, 
+        {definition = "studentProjectUuidForUsers.uuidForUser"; name = studentUuids; }
+    ); 
+}
